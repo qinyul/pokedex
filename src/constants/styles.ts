@@ -15,6 +15,12 @@ export const POKE_CHART_BAR_COLOUR = {
   firstPokemon: 'orange',
   secondPokemon: '#4ABFF4',
 };
+
+export const COLOUR = {
+  mainBlack: '#2B292C',
+  mainRed: '#D53B47',
+};
+
 export const POKEMON_BG_COLOURS = {
   normal: '#C3BEB6',
   fighting: '#DC9537',

@@ -3,14 +3,17 @@ import {
   NativeScrollEvent,
   NativeSyntheticEvent,
   ScrollView as ScrollViewReact,
-  Dimensions,
 } from 'react-native';
 import {useCallback} from 'react';
 import {ON_SCROLL_END_TIMEOUT} from '../../constants/common';
 import {useSetRecoilState} from 'recoil';
 import {loadingState} from '../../atoms/loading-state';
 
-export const ScrollView = ({children, onReachEnd}: ScrollViewProps) => {
+export const ScrollView = ({
+  children,
+  onReachEnd,
+  contentContainerStyle,
+}: ScrollViewProps) => {
   const setIsLoading = useSetRecoilState(loadingState);
   const isCloseToBottom = ({
     layoutMeasurement,
@@ -40,7 +43,7 @@ export const ScrollView = ({children, onReachEnd}: ScrollViewProps) => {
   );
   return (
     <ScrollViewReact
-      style={{marginTop: 10}}
+      contentContainerStyle={{...contentContainerStyle}}
       scrollEventThrottle={400}
       onScroll={handleOnScroll}>
       {children}

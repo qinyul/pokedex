@@ -7,9 +7,20 @@ import {HomeNavigator} from './src/navigator/home-navigator';
 import {ROUTE} from './src/constants/text-content';
 import {CompareNavigator} from './src/navigator/compare-navigator';
 import {Image} from 'react-native';
+import {COLOUR} from './src/constants/styles';
 
 function App(): React.JSX.Element {
   const Tab = createBottomTabNavigator();
+
+  const generalTabBarSetting = {
+    tabBarStyle: {
+      borderTopWidth: 0,
+    },
+    headerShown: false,
+    tabBarActiveBackgroundColor: COLOUR.mainBlack,
+    tabBarInactiveBackgroundColor: COLOUR.mainBlack,
+    tabBarInactiveTintColor: 'white',
+  };
 
   return (
     <RecoilRoot>
@@ -17,7 +28,7 @@ function App(): React.JSX.Element {
         <Tab.Navigator>
           <Tab.Screen
             options={{
-              headerShown: false,
+              ...generalTabBarSetting,
               title: 'Pokedex',
               tabBarIcon: () => (
                 <Image
@@ -31,7 +42,7 @@ function App(): React.JSX.Element {
           />
           <Tab.Screen
             options={{
-              headerShown: false,
+              ...generalTabBarSetting,
               tabBarIcon: () => (
                 <Image
                   source={require('./assets/icon/vs.png')}

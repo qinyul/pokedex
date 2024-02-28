@@ -30,6 +30,7 @@ export const PokeDetailCard = ({pokemon}: PokeDetailProps) => {
     <Card
       containerStyle={{
         backgroundColor: POKEMON_BG_COLOURS[mainType],
+        borderRadius: 15,
       }}>
       <Tab value={tabIndex} onChange={setTabIndex} dense>
         <Tab.Item>{POKEMON_DETAIL_TAB_TITLE.about}</Tab.Item>

@@ -4,6 +4,7 @@ import {Stats} from '../types/pokemon';
 import {POKEMON_INFORMATION_COLUMN_NAMES} from '../constants/text-content';
 import {POKE_CHART_BAR_COLOUR} from '../constants/styles';
 
+const labelTextStyle = {color: 'lightgray'};
 export const pokemonChartMapper = (
   firstPokemonData: Stats,
   secondPokemonData: Stats,
@@ -20,6 +21,7 @@ export const pokemonChartMapper = (
       },
     ],
     label: POKEMON_INFORMATION_COLUMN_NAMES.attack,
+    labelTextStyle,
   },
   {
     stacks: [
@@ -33,6 +35,7 @@ export const pokemonChartMapper = (
       },
     ],
     label: POKEMON_INFORMATION_COLUMN_NAMES.defense,
+    labelTextStyle,
   },
   {
     stacks: [
@@ -43,6 +46,7 @@ export const pokemonChartMapper = (
       },
     ],
     label: POKEMON_INFORMATION_COLUMN_NAMES.hp,
+    labelTextStyle,
   },
   {
     stacks: [
@@ -56,6 +60,7 @@ export const pokemonChartMapper = (
       },
     ],
     label: POKEMON_INFORMATION_COLUMN_NAMES.specialAttackShorthand,
+    labelTextStyle,
   },
   {
     stacks: [
@@ -69,6 +74,7 @@ export const pokemonChartMapper = (
       },
     ],
     label: POKEMON_INFORMATION_COLUMN_NAMES.specialDefenseShorthand,
+    labelTextStyle,
   },
   {
     stacks: [
@@ -82,5 +88,6 @@ export const pokemonChartMapper = (
       },
     ],
     label: POKEMON_INFORMATION_COLUMN_NAMES.defense,
+    labelTextStyle,
   },
 ];

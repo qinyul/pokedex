@@ -12,12 +12,12 @@ export const PokeDiff = () => {
   const secondSlotId = params?.secondSlotId ?? '';
   return (
     <Container>
-      <>
+      <View style={{paddingHorizontal: 10}}>
         <PokemonCompareHeader />
         {firstSlotId.length > 0 && secondSlotId.length > 0 && (
           <PokemonCompareBody />
         )}
-      </>
+      </View>
     </Container>
   );
 };

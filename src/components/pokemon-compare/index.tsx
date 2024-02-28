@@ -16,11 +16,7 @@ export const PokemonCompare = () => {
       <Stack.Screen
         name={ROUTE.stack.pokemonList}
         component={PokemonList}
-        options={{
-          headerStyle: {
-            backgroundColor: 'transparent',
-          },
-        }}
+        options={{headerShown: false}}
       />
     </Stack.Navigator>
   );

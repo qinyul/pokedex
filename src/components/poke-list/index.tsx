@@ -22,7 +22,12 @@ export const PokeList = () => {
   useFetch(getPokemons, [isReachPageEnd], pokemons?.next);
 
   return (
-    <ScrollView onReachEnd={() => setIsReachPageEnd(true)}>
+    <ScrollView
+      onReachEnd={() => setIsReachPageEnd(true)}
+      contentContainerStyle={{
+        flexWrap: 'wrap',
+        flexDirection: 'row',
+      }}>
       <>
         {pokemons &&
           pokemons.data.length > 0 &&

@@ -51,7 +51,10 @@ export const PokemonCompareHeader = () => {
             }
           />
           {firstPokemonName && (
-            <Typography text={capitalizeFirstString(firstPokemonName)} />
+            <Typography
+              customStyle={styles.pokemonName}
+              text={capitalizeFirstString(firstPokemonName)}
+            />
           )}
           <Button
             style={styles.button}
@@ -73,7 +76,10 @@ export const PokemonCompareHeader = () => {
             }
           />
           {secondPokemonName && (
-            <Typography text={capitalizeFirstString(secondPokemonName)} />
+            <Typography
+              customStyle={styles.pokemonName}
+              text={capitalizeFirstString(secondPokemonName)}
+            />
           )}
           <Button
             style={styles.button}
